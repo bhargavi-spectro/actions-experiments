@@ -18,4 +18,4 @@ jobs:
         uses: muinmomin/webhook-action@v1.0.0
         with:
           url: 'https://hooks.slack.com/services/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'
-          data: '{ "response_type": "in_channel", "text": "Hello <@${{ env.USER_NAME }}> from the running GitHub Actions Workflow." }'
+          data: '{"text": "Hello <@${{ env.USER_NAME }}> from the running GitHub Actions Workflow." }'
