@@ -15,11 +15,9 @@ jobs:
 
     steps:
       - name: Send Slack Message
-        uses: dkershner6/post-api-call-action@v1
-        with:
-         url: https://hooks.slack.com/services/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
-         data: "{\"text\":\"Hello, World!\"}"
-         #data: "{\"text\": \"Hello <@${{ env.USER_NAME }}> from the running GitHub Actions Workflow.\"}"
-         headers: "{\"Content-type\": \"application/json\"}"
-       #  params: "{\"content\": \"Test Content\"}"
-    
+         - uses: actions/checkout@v2
+         - name: Run script file
+           run: |
+                chmod +x ./test.sh
+                 ./test.sh
+           shell: bash
