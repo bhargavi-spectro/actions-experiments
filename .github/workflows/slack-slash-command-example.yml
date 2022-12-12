@@ -15,7 +15,8 @@ jobs:
 
     steps:
       - name: Send Slack Message
-        uses: muinmomin/webhook-action@v1.0.0
-        with:
-          url: 'https://hooks.slack.com/services/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'
-          data: '{"text": "Hello <@${{ env.USER_NAME }}> from the running GitHub Actions Workflow." }'
+        run: curl google.com
+        #uses: muinmomin/webhook-action@v1.0.0
+       # with:
+         # url: 'https://hooks.slack.com/services/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'
+          #data: '{"text": "Hello <@${{ env.USER_NAME }}> from the running GitHub Actions Workflow." }'
