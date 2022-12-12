@@ -15,9 +15,8 @@ jobs:
 
     steps:
       - name: Send Slack Message
-         - uses: actions/checkout@v2
-         - name: Run script file
-           run: |
+        uses: actions/checkout@v2
+      - run: |
                 chmod +x ./test.sh
                  ./test.sh
-           shell: bash
+        shell: bash
