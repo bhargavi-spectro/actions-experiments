@@ -6,6 +6,7 @@ on:
       - slack-slash-command-example
 
 jobs:
+  demo:
     name: Run Demo
     runs-on: ubuntu-latest
     env:
